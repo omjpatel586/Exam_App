@@ -25,7 +25,7 @@ export const Snapshot = () => {
             {
                 ((val === 1) ? <Shot val={"Mountains"} ch={"m"}/> : 
                 (val === 2) ? <Shot val={"Beach"} ch={"b"}/> : 
-                (val === 3) ? <Shot val={"Birds"} ch={"bi"}/> :
+                (val === 3) ? <Shot val={"Birds"} ch={"p"}/> :
                 (val === 4) ? <Shot val={"Food"} ch={"f"}/> : 
                 (val !== 0) ? <Shot val={val}/> : "")
             }
