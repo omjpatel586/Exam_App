@@ -5,10 +5,10 @@ const img = ["m","b","p","f"]
 
 export const Shot = (props) => {
     
-    if(img.includes(val[0].toLowerCase())) {
-        if(val === "bird"||val === "birds") {
+    if(img.includes(props.val[0].toLowerCase())) {
+        if(props.val === "bird"||props.val === "birds") {
             props.ch = "p"
-        } else if(val === "best dishes") {
+        } else if(props.val === "best dishes") {
             props.ch = "f"
         }
     }
