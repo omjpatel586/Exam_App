@@ -3,21 +3,9 @@ import "./css/style.css"
 import { Shot } from "./shot"
 
 const dataSet = ["mountain","mount","mountains","moun","beac","beach","best beaches","best mountains","food","foo","best dishes","birds","bird","birds images","best food"]
-const img = ["m","b","p","f"]
-let ch = ""
 
 export const Snapshot = () => {
     const [val,setval] = useState(0)
-    
-    if(img.includes(val[0].toLowerCase())) {
-        if(val === "bird"||val === "birds") {
-            ch = "p"
-        } else if(val === "best dishes") {
-            ch = "f"
-        } else {
-            ch = img[img.indexOf(val[0].toLowerCase())]
-        }
-    }
 
     return (
         <>
@@ -39,7 +27,7 @@ export const Snapshot = () => {
                 (val === 2) ? <Shot val={"Beach"} ch={"b"}/> : 
                 (val === 3) ? <Shot val={"Birds"} ch={"p"}/> :
                 (val === 4) ? <Shot val={"Food"} ch={"f"}/> : 
-                (val !== 0) ? <Shot val={val} ch={ch}/> : "")
+                (val !== 0) ? <Shot val={val} ch={val[0]}/> : "")
             }
         </>
     )
