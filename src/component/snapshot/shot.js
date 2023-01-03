@@ -1,19 +1,8 @@
 import { Container } from "react-bootstrap"
 
 const val = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const img = ["m","b","p","f"]
 
 export const Shot = (props) => {
-    let ch = ""
-    if(img.includes(props.val[0].toLowerCase())) {
-        if(props.val === "bird"||props.val === "birds") {
-            ch = "p"
-        } else if(props.val === "best dishes") {
-            ch = "f"
-        } else {
-            ch = img[img.indexOf(props.val[0].toLowerCase())]
-        }
-    }
     return (
         <>
             <div>
@@ -25,7 +14,7 @@ export const Shot = (props) => {
                                 return (
                                     <>
                                         <div className="image">
-                                            <img src={require(`./Images/${ch}${i}.jpg`)} alt="Not Found"></img>
+                                            <img src={require(`./Images/${props.ch}${i}.jpg`)} alt="Not Found"></img>
                                         </div>
                                     </>
                                 )
